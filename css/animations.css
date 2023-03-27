@@ -1,0 +1,87 @@
+/* animations */
+
+/* text link hover */
+span a:hover {
+    transition: all 0.2s ease-in-out;
+    color: var(--accent);
+}
+
+/* before hover */
+.hover__animation {
+    transform: scale(1.0);
+    transition: all 0.2s ease-in-out;
+}
+
+/* hover */
+.hover__animation:hover {
+    transform: var(--slightly-bigger);
+    transition: all 0.2s ease-in-out;
+}
+.hover__animation:hover svg, 
+.hover__animation:hover span,
+.hover__animation:hover  {
+    color: var(--accent);
+}
+
+/* button animation */
+.contact-button:hover {
+    background-color: var(--accent);
+}
+.contact-button:hover svg, 
+.contact-button:hover span {
+    color: var(--secondary);
+}
+
+/* card animation */
+.card {
+    animation: 0.8s card-loading ease-in-out;
+}
+
+@keyframes card-loading {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1.0);
+    }
+  }
+
+
+
+.card {
+    border: 2px solid transparent;
+}
+
+.card:hover .card__image {
+    fill: var(--accent);
+}
+
+.card:hover {
+    transition: border 0s ease-in-out;
+    border: 2px solid var(--accent);
+}
+
+.card:hover .card__icon {
+    transition: all 0s ease-in-out;
+    fill: var(--accent);
+} 
+
+.card__4 a svg {
+    transition: color 0.2s ease-in-out;
+    color: var(--terciary);
+}
+
+.card__4 a:hover svg {
+    transition: color 0s;
+    color: var(--accent);
+}
+
+/* active page indicator */
+.current__title svg {
+    border-bottom: 0.2rem solid var(--secondary);
+    box-sizing: unset;
+}
+
+.current__title:hover svg {
+    border-bottom: 0.2rem solid var(--accent);
+}
